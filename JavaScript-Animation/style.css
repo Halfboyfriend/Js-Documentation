@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 15);
+}
+.dots-container{
+    height: 250px;
+    width: 230px;
+    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-reflect: below 30px linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+
+}
+.dots{
+    position: relative;
+    height: 8px;
+    width: 8px;
+    background-color: cyan;
+    border-radius: 50%;
+    margin: 13px;
+    opacity: 0.5;
+    animation: glow 1s ease infinite;
+
+}
+@keyframes glow{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+        box-shadow: 0 0 5px cyan, 0 0 10px cyan;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+
+.dots-container.triangle{
+    height: 240px;
+    width: 240px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.dots-container.triangle .dots{
+    background: rgb(9, 255, 0);
+    margin: 4px;
+    animation: glow2 1s ease infinite;
+    
+}
+@keyframes glow2{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+        box-shadow: 0 0 5px rgb(9, 255, 0), 0 0 10px rgb(9, 255, 0);
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+.dots-container.circle{
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.dots-container.circle .dots{
+    background: rgb(255, 0, 255);
+    margin: 4px;
+    animation: glow3 1s ease infinite;
+    
+}
+@keyframes glow3{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+        box-shadow: 0 0 5px rgb(255, 0, 200), 0 0 10px rgb(255, 0, 255);
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
